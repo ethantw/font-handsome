@@ -10,7 +10,9 @@ every time we want a different icon or modifying
 the DOM tree for other interactional effects,
 anymore.
 
+[Check out the demo →](http://ethantw.github.io/font-handsome/demo.html)  
 *Current version:* **0.1.0**, with all icons from Font Awesome **4.2.0**.
+
 
 Install
 -------
