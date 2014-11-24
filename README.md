@@ -1,14 +1,10 @@
 
 Font Handsome
 =============
-‘Font Handsome’ aims to improve messy presentational classes and the huge predefined CSS file <i>Font Awesome</i> provides. Font Handsome assign icons onto the very elements that you need them to be.
+‘Font Handsome’ aims to improve messy presentational classes and the huge predefined CSS file <i>Font Awesome</i> provides. Font Handsome lets you assign icons onto the very elements you need them to be.
 
-Semantic issue aside, the main purpose of the project 
-is to take back full control within style sheets.
-We don’t need no changing the HTML structure
-every time we want a different icon or modifying
-the DOM tree for other interactional effects,
-anymore.
+Semantic issue aside, the main purpose of the project is to take back full control within style sheets.
+We don’t need no changing the HTML structure every time we want a different icon or modifying the DOM tree for other interactional effects, anymore.
 
 [Check out the demo →](http://ethantw.github.io/font-handsome/demo.html)  
 *Current version:* **0.1.0**, with all icons from Font Awesome **4.2.0**.
@@ -21,11 +17,10 @@ Install
 
 Basic usage
 -----------
-Font Handsome currently supports Sass. Import Font Handsome in your sheet,
+Font Handsome currently supports Sass format. Import Font Handsome in your sheet,
 
 ```scss
-// We defaultly use CDN webfonts. You can 
-// set up a different path for devlopment.
+// We defaultly use CDN webfonts. You can set up a different path for devlopment.
 //- $fh-path: 'path/src/'
 
 @import ../(node_modules|bower_components)/font-handsome/index
@@ -35,8 +30,9 @@ Move the presentational classes `fa-*` into your Sass style sheets with the pref
 
 #### Syntax
 ```scss
-+fh( $icon, $color: false ) // Use `@include` instead of `+` in .scss files
-@extend %fh-* // Optional utility @extend(s)
+container
+  +fh( $icon, $color: false ) // Use `@include` instead of `+` in .scss files
+  @extend %fh-* // Optional utility @extend(s)
 ```
 Put icon’s name from <http://fontawesome.io/icons/> without the prefix `fa-`.
 
@@ -81,8 +77,9 @@ Defaultly Font Handsome uses `::before` pseudo element for placing icons. Assign
 
 #### Syntax for end-point icon
 ```scss
-+fha( $icon, $color ) // Use `@include` instead of `+` in .scss files
-@extend %fha-* // Optional utility @extend(s)
+container
+  +fha( $icon, $color ) // Use `@include` instead of `+` in .scss files
+  @extend %fha-* // Optional utility @extend(s)
 ```
 #### Example
 ```html
