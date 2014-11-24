@@ -161,9 +161,9 @@ Onto `::after` pseudo element,
   @extend %fha-3x
 ```
 ### Alternate the colour
-Use `fh()` or `fha()`’s second parametre `$color` to assign icon’s colour while including icons.
+Use mixin `fh()` or `fha()`’s second parametre `$color` to assign icons’ colour while including them.
 
-Use @mixin `fh-color( $color )` or `fha-color( $color )` to alternate the colour in different inherited situations.
+Use mixin `fh-color( $color )` or `fha-color( $color )` to alternate the colour in different inherited situations.
 
 ```scss
 .airport
@@ -352,6 +352,7 @@ button.report
   +fh-stack( flag, circle, #d9534f )
   @extend %fh-2x-inverse
   background-color: #d9534f
+  color: #f3f3f3
 ```
 
 ```scss
@@ -361,7 +362,7 @@ pre.cli
   padding: .5em .5em .55em 2.3em
 ```
 #### Colours
-The `fh-stack` mixin’s third/forth parametres `$i1x-color`/`$i2x-color` are optional. Assign the colours of the two icons seperately or just use the inherited one.
+The mixin `fh-stack()`’s third/forth parametres `$i1x-color`/`$i2x-color` are optional. Assign the colours of the two icons seperately or just use the inherited one.
 
 #### Which icon to be on top
 Originally icon-1x is put on top of icon-2x, set the fifth parametre `$i2x-on-top` to `true` to put the icon-2x on top. 
