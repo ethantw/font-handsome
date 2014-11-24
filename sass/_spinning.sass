@@ -1,0 +1,23 @@
+
+%fh-spin:before,
+%fha-spin:after
+  -webkit-animation: fh-spin 2s infinite linear
+  -moz-animation: fh-spin 2s infinite linear
+  animation: fh-spin 2s infinite linear
+
+@-webkit-keyframes fh-spin 
+  0%
+    -webkit-transform: rotate(0deg) 
+  100%
+    -webkit-transform: rotate(359deg) 
+@-ms-keyframes fh-spin 
+  0%
+    -ms-transform: rotate(0deg) 
+  100%
+    -ms-transform: rotate(359deg) 
+@keyframes fh-spin 
+  0%
+    transform: rotate(0deg) 
+  100%
+    transform: rotate(359deg) 
+

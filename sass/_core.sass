@@ -1,0 +1,63 @@
+
+%fh:before,
+%fha:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  display: inline-block
+  font-family: FontAwesome, $fh-fallback
+  font-size: inherit
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  padding: .05em
+  text-indent: 0
+  text-rendering: auto 
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+=fh( $icon, $color: false )
+  @extend %fh
+  @extend %fh-#{$icon}
+  &:before
+    @if $color
+      color: if( $color == true, $fh-color, $color )
+=fha( $icon, $color: false )
+  @extend %fha
+  @extend %fha-#{$icon}
+  &:after
+    @if $color
+      color: if( $color == true, $fh-color, $color )
+
+=fh-color( $color )
+  &:before
+    color: $color
+=fha-color( $color )
+  &:after
+    color: $color
+
+=fh-pua( $icon, $font: false )
+  @extend %fh
+  &:before
+    content: $icon
+    @if $font 
+      font-family: $font, FontAwesome, $fh-fallback
+=fha-pua( $icon, $font: false )
+  @extend %fha
+  &:after
+    content: $icon
+    @if $font 
+      font-family: $font, FontAwesome, $fh-fallback
+
+%fh-hide-text,
+%fha-hide-text
+  color: transparent
+  display: inline-block
+  height: 1.1em
+  width: 1.1em
+  overflow: hidden
+  padding: .05em
+%fh-hide-text:before,
+%fha-hide-text:after
+  color: $fh-color
+
