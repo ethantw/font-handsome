@@ -1,4 +1,4 @@
 
 watch-test ::
-	jade -Pw test/*.jade | sass --watch --sourcemap=none test/sass:test --style expanded 
+	jade -Pw *.jade | sass --watch --sourcemap=none demo.sass --style expanded 
 
