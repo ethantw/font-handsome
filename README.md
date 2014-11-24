@@ -10,7 +10,7 @@ every time we want a different icon or modifying
 the DOM tree for other interactional effects,
 anymore.
 
-**Current version:** *0.1.0*, with all icons from Font Awesome *4.2.0*.
+*Current version:* **0.1.0**, with all icons from Font Awesome **4.2.0**.
 
 Install
 -------
@@ -19,7 +19,7 @@ Install
 
 Basic usage
 -----------
-Import Font Handsome in your Sass sheet,
+Font Handsome currently supports Sass. Import Font Handsome in your sheet,
 
 ```scss
 // We defaultly use CDN webfonts. You can 
@@ -55,7 +55,7 @@ With Font Handsome, write no more presentational markups and classes,
 <button class="share-fb">Share to Twitter</button>
 ```
 
-Import icons in Sass with the @mixin `fh( $icon, $color )`.
+Import icons in Sass with mixin `fh( $icon, $color )`.
 
 ```scss
 span.share
@@ -75,7 +75,7 @@ button.share-twitter
 ```
 
 ### Starting or end point (::before/::after)
-Defaultly Font Handsome uses `::before` pseudo element for placing icons. Assign icons onto `::after` pseudo element with the prefix `fha-*`. This normally makes the icon appear in the end side of its container.
+Defaultly Font Handsome uses `::before` pseudo element for placing icons. Assign icons onto `::after` pseudo element with the prefix `fha-*`. This normally makes the icon appear in the end point of its container.
 
 #### Syntax for end-point icon
 ```scss
@@ -371,6 +371,47 @@ Originally icon-1x is put on top of icon-2x, set the fifth parametre `$i2x-on-to
 p.no-photo
   +fh-stack( camera, ban, false, #d9534f, true )
 ```
+
+Summary
+-------
+### Mixins
+- Import icons  
+  `fh( $icon[, $color] )`/`fha( $icon[, $color] )`
+- Assign colour  
+  `fh-color( $color )`/`fha-color( $color )`
+- Unordered lists
+  * Entire list item `fh-ul( $icon[, $color] )`
+  * Certain list item `fh-li( $icon[, $color] )`
+- Double icon stack  
+  `fh-stack( $i1x, $i2x[, $i1x-color, $i2x-color, $i2x-on-top] )`
+
+### Extends
+- Font and basic declaration  
+  `%fh`/`%fha`
+- Icons  
+  `%fh-[icon-name]`/`%fha-[icon-name]`
+- Hide original text  
+  `%fh-hide-text`/`%fha-hide-text`
+- Larger sizes
+  * `%fh-lg`, `%fh-2x`, `%fh-3x`, `%fh-4x` or `%fh-5x`
+  * `%fha-lg`, `%fha-2x`, `%fha-3x`, `%fha-4x` or `%fha-5x`
+- Fixed-width  
+  `%fh-fw`/`%fha-fw`
+- Bordered icon  
+  `%fh-border`/`%fha-border`
+- Pull right or left
+  * `%fh-pull-right` or `%fh-pull-left`
+  * `%fha-pull-right` or `%fha-pull-left`
+- Spining  
+  `%fh-spin`/`%fha-spin`
+- Rotate (90, 180 or 270 deg.)  
+  `%fh-rotate-*`/`%fha-rotate-*`
+- Flip
+  * `%fh-flip-horizontal`, `%fh-flip-vertical`
+  * `%fha-flip-horizontal`, `%fha-flip-vertical`
+- Inverse colour
+  * `%fh-inverse` or `%fh-1x-inverse`
+  * `%fha-inverse` or `%fh-2x-inverse`
 
 License
 -------
