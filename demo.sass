@@ -1,0 +1,193 @@
+
+@import demo/normalize
+@import index
+
+$primary: #337ab7
+$success: #5cb85c
+$info: #5bc0de
+$warning: #f0ad4e
+$danger: #d9534f
+
+*,
+*:before,
+*:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+html
+  font-size: 16px
+.layout
+  max-width: 60em
+  width: 90%
+  margin: 0 auto
+a:link,
+a:visited
+  color: darken($primary, 10%)
+  text-decoration: none
+a:hover
+  color: $primary
+  text-decoration: underline
+a:active
+  color: darken($success, 10%)
+button
+  background: none 
+  border: 1px solid #ccc
+  border-radius: .25em
+  outline: 0
+  padding: .25em
+article.layout
+  padding: 2em 0
+article
+  h1, h2, h3, h4, h5, h6
+    + p,
+    + ul,
+    + ol
+      margin-top: -1em
+
+// Font Handsome examples
+// ----------------------
+// Basic usage
+.share
+  +fh( share-alt )
+  margin-right: .25em
+button.share-twitter
+  +fh( twitter, #50aaf1 )
+button.share-fb
+  +fh( facebook-square, #405b9d )
+
+// Pseudo elements
+button.config
+  +fh( $icon: cog, $color: true ) 
+button.logout
+  +fha( sign-out, $danger ) 
+
+// Hidden text
+#media button
+  @extend %fh, %fh-hide-text
+  height: 2em
+  width: 2em
+  padding: .35em .5em .5em
+  background-color: #999
+  border-color: #ccc
+  border-radius: 1em
+  &.backward
+    @extend %fh-backward
+    padding-left: .3em
+  &.play-pause
+    @extend %fh-play
+    background-color: #bbb
+  &.forward
+    @extend %fh-forward
+// Sizes
+span.photo
+  background-color: lighten($info, 15%) 
+  border-radius: .25em
+  margin-right: .5em
+  padding: .25em
+.photo
+  +fh( camera-retro ) 
+  @extend %fh-lg
+.huge-photo
+  +fha( camera-retro ) 
+  @extend %fha-3x, span.photo
+
+// Fixed-width
+nav.main ul
+  padding-left: 1em
+  list-style: none
+nav.main li
+  @extend %fh, %fh-fw
+      
+  &.home
+    @extend %fh-home
+  &.lib
+    @extend %fh-book
+  &.app
+    @extend %fh-pencil
+  &.config
+    @extend %fh-cog
+
+// Lists
+article ul.cooker
+  +fh-ul( $icon: square, $color: #999 )
+  li:hover,
+  li.checked
+    +fh-li( $icon: check-square, $color: $primary )
+    cursor: pointer
+  li.checked:before
+    color: $success
+  li.cutlery
+    +fh-li( $icon: cutlery, $color: $warning )
+// Bordered & pulled
+.entry blockquote 
+  &:nth-child(odd) p:first-child
+    +fh( quote-right )
+    @extend %fh-border, %fh-pull-right, %fh-3x
+    text-align: right
+  &:nth-child(even) p:first-child
+    +fh( quote-left )
+    @extend %fh-border, %fh-pull-left, %fh-3x
+    text-align: left
+
+// Spinning
+p.loading 
+  +fh( spinner )
+  @extend %fh-spin
+
+p.waiting
+  +fh( circle-o-notch, true )
+  @extend %fh-spin
+
+button.setting
+  +fh( cog )
+  @extend %fh-spin
+
+button.refresh
+  +fha( refresh ) 
+  &:hover,
+  &.ing
+    @extend %fha-spin
+
+// Rotated & flipped
+.military-code
+  list-style: none
+  padding-left: .5em
+  > li
+    +fh( shield, $warning )
+    @extend %fh-fw
+    &:before
+      margin-right: .5em
+  .attacking
+    @extend %fh-rotate-90
+  .attacked
+    @extend %fh-rotate-270 
+  .wiped-out
+    @extend %fh-rotate-180
+    +fh-color( $success )  
+  .ally
+    @extend %fh-flip-horizontal
+    +fh-color( $success )  
+  .enemy
+    @extend %fh-flip-vertical
+    +fh-color( $success )  
+
+// Stacked
+a.tweet
+  +fh-stack( twitter, square-o, #50aaf1, #50aaf1 )
+button.report
+  +fh-stack( flag, circle, $danger )
+  @extend %fh-2x-inverse
+  background-color: $danger
+  border-color: darken($danger, 7%)
+  color: #efefef
+  font-weight: bold
+  padding-bottom: .55em
+pre.cli 
+  +fh-stack( terminal, square )
+  @extend %fh-1x-inverse
+  background-color: #ace
+  border-radius: .25em
+  padding: .5em .5em .55em 2.3em
+p.no-photo
+  +fh-stack( camera, ban, true, $danger, true )
+
