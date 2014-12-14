@@ -12,7 +12,7 @@ Semantic issue aside, the main purpose of the project is to take back full contr
 Install
 -------
 - NPM `npm i --save font-handsome`
-- Bower `bower install --save font-handsome`
+- Bower `bower install git://github.com/ethantw/font-handsome.git`
 
 Basic usage
 -----------
