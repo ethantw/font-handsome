@@ -36,6 +36,8 @@ Move the presentational classes `fa-*` into your Sass style sheets with the pref
 Put icon’s name from <http://fontawesome.io/icons/> without the prefix `fa-`.
 
 #### Example
+<img width="383px" src="http://ethantw.github.io/font-handsome/demo/img/basic-usage.png">
+
 An old form in Font Awesome syntax would look like,
 
 ```html
@@ -63,6 +65,7 @@ button.share-fb
   +fh( facebook-square, #405b9d ) 
 ```
 
+
 Font Handsome smartly avoids code bloat. The @mixin syntax is equal to the @extend one below. 
 
 ```scss
@@ -81,6 +84,8 @@ Defaultly Font Handsome uses `::before` pseudo element for placing icons, which 
   @extend %fha-* // Optional utility @extend(s)
 ```
 #### Example
+<img width="201px" src="http://ethantw.github.io/font-handsome/demo/img/before-after.png">
+
 ```html
 <button class="config">Preference</button>
 <button class="logout">Logout</button>
@@ -103,6 +108,8 @@ Hide the text *presentationally* with the @extend `%fh-hide-text`.
 If an icon isn’t assigned with colour, hiding its text automatically makes the icon inherit the default colour `$fh-color`.
 
 #### A bad example
+<img width="122px" src="http://ethantw.github.io/font-handsome/demo/img/hide-text.png">
+
 ```html
 <div id="media-control"  data-state="paused">
   <button class="backward">
@@ -143,6 +150,8 @@ With this approach, we don’t even need semantic attributes like `aria-label`. 
 
 
 ### Larger icons
+<img width="266px" src="http://ethantw.github.io/font-handsome/demo/img/sizes.png">
+
 To increase the icon sizes, extend the selector with `%fh-lg` (33% larger), `%fh-2x`, `%fh-3x`, `%fh-4x` or `%fh-5x`. 
 
 ```scss
@@ -174,6 +183,8 @@ Use mixin `fh-color( $color )` or `fha-color( $color )` to alternate the colour 
 ```
 
 ### Fixed width icons
+<img width="132px" src="http://ethantw.github.io/font-handsome/demo/img/fw.png">
+
 Extend the selector with `%fh-fw` to set icons at a predefined fixed width. 
 
 End point — `%fha-fw`.
@@ -208,6 +219,8 @@ Mix an unordered list with @mixin `fh-ul( $icon, $color )` to assign an icon as 
 
 **Note:** There are *no* end point support for lists.
 
+<img width="173px" src="http://ethantw.github.io/font-handsome/demo/img/list.png">
+
 ```html
 <article class="recipe">
   <p>Here are what you need to cook a delicious pake,
@@ -241,6 +254,8 @@ Extend a selector with `%fh-border` and `%fh-pull-right` or `%fh-pull-left` for 
 
 End point — `%fha-border`, `%fha-pull-right` or `%fha-pull-left`.
 
+<img width="501px" src="http://ethantw.github.io/font-handsome/demo/img/bordered-and-pulled.png">
+
 ```html
 <div class="entry">
   …
@@ -268,6 +283,8 @@ End point — `%fha-border`, `%fha-pull-right` or `%fha-pull-left`.
 Extend a selector with `%fh-spin` to get any icon to spin. Works well with icons `spinner`, `circle-o-notch`, `refresh` and `cog`.
 
 End point — `%fha-spin`.
+
+<img width="379px" src="http://ethantw.github.io/font-handsome/demo/img/spinning.png">
 
 ```scss
 p.loading 
@@ -297,6 +314,8 @@ button.refresh
 Extend a selector with `%fh-rotate-*` and `%fh-flip-*` to rotate and flip.
 
 End point — `%fha-rotate-*` and `%fha-flip-*`.
+
+<img width="292px" src="http://ethantw.github.io/font-handsome/demo/img/rotate-and-flip.png">
 
 ```scss
 .military-code
@@ -335,6 +354,7 @@ fh-stack( $i1x, $i2x, $i1x-color: false, $i2x-color: false, $i2x-on-top: false )
 ```
 
 #### Example
+<img width="304px" src="http://ethantw.github.io/font-handsome/demo/img/stack.png">
 
 ```scss
 a.tweet
