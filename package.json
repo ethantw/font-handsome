@@ -1,8 +1,8 @@
 {
   "name": "font-handsome",
-  "version": "0.0.1",
-  "description": "Take back control of icon-styling OOSass way",
-  "main": "index.sass",
+  "version": "0.1.0",
+  "description": "Take back full control of icons within stylesheets.",
+  "main": "_index.sass",
   "repository": {
     "type": "git",
     "url": "http://github.com/ethantw/font-handsome"
