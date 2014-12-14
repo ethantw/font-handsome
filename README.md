@@ -3,8 +3,7 @@ Font Handsome
 =============
 ‘Font Handsome’ aims to improve messy presentational classes and the huge predefined CSS file <i>Font Awesome</i> provides. Font Handsome lets you assign icons onto the very elements you need them to be.
 
-Semantic issue aside, the main purpose of the project is to take back full control within style sheets.
-We don’t need no changing the HTML structure every time we want a different icon or modifying the DOM tree for other interactional effects, anymore.
+Semantic issue aside, the main purpose of the project is to take back full control within style sheets. We don’t need no changing the HTML structure every time we want a different icon or modifying the DOM tree for other interactional effects, anymore.
 
 [Check out the demo →](http://ethantw.github.io/font-handsome/demo.html)  
 *Current version:* **0.1.0**, with all icons from Font Awesome **4.2.0**.
@@ -30,7 +29,7 @@ Move the presentational classes `fa-*` into your Sass style sheets with the pref
 
 #### Syntax
 ```scss
-container
+[container]
   +fh( $icon, $color: false ) // Use `@include` instead of `+` in .scss files
   @extend %fh-* // Optional utility @extend(s)
 ```
@@ -40,7 +39,7 @@ Put icon’s name from <http://fontawesome.io/icons/> without the prefix `fa-`.
 An old form in Font Awesome syntax would look like,
 
 ```html
-<span class="share"><i class="fa fa-share-alt"></i> Share</button>
+<span class="share"><i class="fa fa-share-alt"></i> Share</span>
 <button class="share-twitter"><i class="fa fa-twitter"></i> Share to Twitter</button>
 <button class="share-fb"><i class="fa fa-facebook-square"></i> Share to Twitter</button>
 ```
@@ -48,12 +47,12 @@ An old form in Font Awesome syntax would look like,
 With Font Handsome, write no more presentational markups and classes,
 
 ```html
-<span class="share">Share</button>
+<span class="share">Share</span>
 <button class="share-twitter">Share to Twitter</button>
 <button class="share-fb">Share to Twitter</button>
 ```
 
-Import icons in Sass with mixin `fh( $icon, $color )`.
+Import icons and assign colours to them with Sass mixin `fh( $icon[, $color] )`.
 
 ```scss
 span.share
@@ -73,11 +72,11 @@ button.share-twitter
 ```
 
 ### Starting or end point (::before/::after)
-Defaultly Font Handsome uses `::before` pseudo element for placing icons. Assign icons onto `::after` pseudo element with the prefix `fha-*`. This normally makes the icon appear in the end point of its container.
+Defaultly Font Handsome uses `::before` pseudo element for placing icons, which places icon at the starting point of an element. Assign icons onto `::after` pseudo element with the prefix `fha-*`. This normally makes the icon appear in the end point of its container.
 
 #### Syntax for end-point icon
 ```scss
-container
+[container]
   +fha( $icon, $color ) // Use `@include` instead of `+` in .scss files
   @extend %fha-* // Optional utility @extend(s)
 ```
@@ -411,6 +410,10 @@ Summary
 - Inverse colour
   * `%fh-inverse` or `%fh-1x-inverse`
   * `%fha-inverse` or `%fh-2x-inverse`
+
+Browser support
+---------------
+Font Handsome supports all *modern* browsers. 
 
 License
 -------
