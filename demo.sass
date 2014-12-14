@@ -59,11 +59,12 @@ button.share-fb
 button.config
   +fh( $icon: cog, $color: true ) 
 button.logout
-  +fha( sign-out, $danger ) 
+  +fha( $icon: sign-out, $color: $danger ) 
 
 // Hidden text
 #media button
-  @extend %fh, %fh-hide-text
+  @extend %fh
+  @extend %fh-hide-text
   height: 2em
   width: 2em
   padding: .35em .5em .5em
@@ -90,14 +91,16 @@ span.photo
   @extend %fh-lg
 .huge-photo
   +fha( camera-retro ) 
-  @extend %fha-3x, span.photo
+  @extend %fha-3x
+  @extend span.photo
 
 // Fixed-width
 nav.main ul
   padding-left: 1em
   list-style: none
 nav.main li
-  @extend %fh, %fh-fw
+  @extend %fh
+  @extend %fh-fw
       
   &.home
     @extend %fh-home
@@ -124,11 +127,15 @@ article ul.cooker
 .entry blockquote 
   &:nth-child(odd) p:first-child
     +fh( quote-right )
-    @extend %fh-border, %fh-pull-right, %fh-3x
+    @extend %fh-border
+    @extend %fh-pull-right
+    @extend %fh-3x
     text-align: right
   &:nth-child(even) p:first-child
     +fh( quote-left )
-    @extend %fh-border, %fh-pull-left, %fh-3x
+    @extend %fh-border
+    @extend %fh-pull-left
+    @extend %fh-3x
     text-align: left
 
 // Spinning
