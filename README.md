@@ -5,7 +5,7 @@ Font Handsome
 
 Semantic issue aside, the main purpose of the project is to take back full control within style sheets. We don’t need no changing the HTML structure every time we want a different icon or modifying the DOM tree for other interactional effects, anymore.
 
-[Check out the demo →](http://ethantw.github.io/font-handsome/demo.html)  
+[Check out the demo →](http://ethantw.github.io/font-handsome/)  
 *Current version:* **0.1.0**, with all icons from Font Awesome **4.2.0**.
 
 
