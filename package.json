@@ -1,6 +1,6 @@
 {
   "name": "font-handsome",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Take back full control of icons within stylesheets.",
   "main": "_index.sass",
   "repository": {
