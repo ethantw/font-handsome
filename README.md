@@ -14,6 +14,35 @@ Install
 - NPM `npm i --save font-handsome`
 - Bower `bower install git://github.com/ethantw/font-handsome.git`
 
+### Run test (Compiling Sass)
+- `npm test`
+
+Browser support
+---------------
+Font Handsome supports all *modern* browsers. 
+
+License
+-------
+Font Handsome is released under MIT license.  
+
+API
+===
+- [Basic usage](#basic-usage)
+- [Starting or end point](#starting-or-end-point-beforeafter)
+- [Utilities](#utilities)
+  * [Hide the original text](#hide-the-original-text)
+  * [Larger icons](#larger-icons)
+  * [Alternate the colour](#alternate-the-colour)
+  * [Fixed-width icons](#fixed-width-icons)
+  * [Unordered lists](#unordered-lists)
+  * [Bordered & pulled icons](#bordered--pulled-icons)
+  * [Spinning icons](#spinning-icons)
+  * [Rotated & flipped](#rotated--flipped)
+  * [Stacked icons](#stacked-icons)
+- [Summary](#summary)
+  * [Mixins](#mixins)
+  * [Extends](#extends)
+
 Basic usage
 -----------
 Font Handsome currently supports Sass format. Import Font Handsome in your sheet,
@@ -430,12 +459,4 @@ Summary
 - Inverse colour
   * `%fh-inverse` or `%fh-1x-inverse`
   * `%fha-inverse` or `%fh-2x-inverse`
-
-Browser support
----------------
-Font Handsome supports all *modern* browsers. 
-
-License
--------
-Font Handsome is licensed under MIT license.  
 
