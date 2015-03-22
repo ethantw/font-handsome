@@ -12,14 +12,14 @@
 %fh-th:before, %fha-th:after { content: $fh-var-th; }
 %fh-th-list:before, %fha-th-list:after { content: $fh-var-th-list; }
 %fh-check:before, %fha-check:after { content: $fh-var-check; }
-%fh-remove,
-%fh-close,
+%fh-remove:before, %fha-remove:after,
+%fh-close:before, %fha-close:after,
 %fh-times:before, %fha-times:after { content: $fh-var-times; }
 %fh-search-plus:before, %fha-search-plus:after { content: $fh-var-search-plus; }
 %fh-search-minus:before, %fha-search-minus:after { content: $fh-var-search-minus; }
 %fh-power-off:before, %fha-power-off:after { content: $fh-var-power-off; }
 %fh-signal:before, %fha-signal:after { content: $fh-var-signal; }
-%fh-gear,
+%fh-gear:before, %fha-gear:after,
 %fh-cog:before, %fha-cog:after { content: $fh-var-cog; }
 %fh-trash-o:before, %fha-trash-o:after { content: $fh-var-trash-o; }
 %fh-home:before, %fha-home:after { content: $fh-var-home; }
@@ -59,18 +59,18 @@
 %fh-align-right:before, %fha-align-right:after { content: $fh-var-align-right; }
 %fh-align-justify:before, %fha-align-justify:after { content: $fh-var-align-justify; }
 %fh-list:before, %fha-list:after { content: $fh-var-list; }
-%fh-dedent,
+%fh-dedent:before, %fha-dedent:after,
 %fh-outdent:before, %fha-outdent:after { content: $fh-var-outdent; }
 %fh-indent:before, %fha-indent:after { content: $fh-var-indent; }
 %fh-video-camera:before, %fha-video-camera:after { content: $fh-var-video-camera; }
-%fh-photo,
-%fh-image,
+%fh-photo:before, %fha-photo:after,
+%fh-image:before, %fha-image:after,
 %fh-picture-o:before, %fha-picture-o:after { content: $fh-var-picture-o; }
 %fh-pencil:before, %fha-pencil:after { content: $fh-var-pencil; }
 %fh-map-marker:before, %fha-map-marker:after { content: $fh-var-map-marker; }
 %fh-adjust:before, %fha-adjust:after { content: $fh-var-adjust; }
 %fh-tint:before, %fha-tint:after { content: $fh-var-tint; }
-%fh-edit,
+%fh-edit:before, %fha-edit:after,
 %fh-pencil-square-o:before, %fha-pencil-square-o:after { content: $fh-var-pencil-square-o; }
 %fh-share-square-o:before, %fha-share-square-o:after { content: $fh-var-share-square-o; }
 %fh-check-square-o:before, %fha-check-square-o:after { content: $fh-var-check-square-o; }
@@ -114,7 +114,7 @@
 %fh-fire:before, %fha-fire:after { content: $fh-var-fire; }
 %fh-eye:before, %fha-eye:after { content: $fh-var-eye; }
 %fh-eye-slash:before, %fha-eye-slash:after { content: $fh-var-eye-slash; }
-%fh-warning,
+%fh-warning:before, %fha-warning:after,
 %fh-exclamation-triangle:before, %fha-exclamation-triangle:after { content: $fh-var-exclamation-triangle; }
 %fh-plane:before, %fha-plane:after { content: $fh-var-plane; }
 %fh-calendar:before, %fha-calendar:after { content: $fh-var-calendar; }
@@ -135,7 +135,7 @@
 %fh-facebook-square:before, %fha-facebook-square:after { content: $fh-var-facebook-square; }
 %fh-camera-retro:before, %fha-camera-retro:after { content: $fh-var-camera-retro; }
 %fh-key:before, %fha-key:after { content: $fh-var-key; }
-%fh-gears,
+%fh-gears:before, %fha-gears:after,
 %fh-cogs:before, %fha-cogs:after { content: $fh-var-cogs; }
 %fh-comments:before, %fha-comments:after { content: $fh-var-comments; }
 %fh-thumbs-o-up:before, %fha-thumbs-o-up:after { content: $fh-var-thumbs-o-up; }
@@ -179,22 +179,22 @@
 %fh-filter:before, %fha-filter:after { content: $fh-var-filter; }
 %fh-briefcase:before, %fha-briefcase:after { content: $fh-var-briefcase; }
 %fh-arrows-alt:before, %fha-arrows-alt:after { content: $fh-var-arrows-alt; }
-%fh-group,
+%fh-group:before, %fha-group:after,
 %fh-users:before, %fha-users:after { content: $fh-var-users; }
-%fh-chain,
+%fh-chain:before, %fha-chain:after,
 %fh-link:before, %fha-link:after { content: $fh-var-link; }
 %fh-cloud:before, %fha-cloud:after { content: $fh-var-cloud; }
 %fh-flask:before, %fha-flask:after { content: $fh-var-flask; }
-%fh-cut,
+%fh-cut:before, %fha-cut:after,
 %fh-scissors:before, %fha-scissors:after { content: $fh-var-scissors; }
-%fh-copy,
+%fh-copy:before, %fha-copy:after,
 %fh-files-o:before, %fha-files-o:after { content: $fh-var-files-o; }
 %fh-paperclip:before, %fha-paperclip:after { content: $fh-var-paperclip; }
-%fh-save,
+%fh-save:before, %fha-save:after,
 %fh-floppy-o:before, %fha-floppy-o:after { content: $fh-var-floppy-o; }
 %fh-square:before, %fha-square:after { content: $fh-var-square; }
-%fh-navicon,
-%fh-reorder,
+%fh-navicon:before, %fha-navicon:after,
+%fh-reorder:before, %fha-reorder:after,
 %fh-bars:before, %fha-bars:after { content: $fh-var-bars; }
 %fh-list-ul:before, %fha-list-ul:after { content: $fh-var-list-ul; }
 %fh-list-ol:before, %fha-list-ol:after { content: $fh-var-list-ol; }
@@ -213,7 +213,7 @@
 %fh-caret-left:before, %fha-caret-left:after { content: $fh-var-caret-left; }
 %fh-caret-right:before, %fha-caret-right:after { content: $fh-var-caret-right; }
 %fh-columns:before, %fha-columns:after { content: $fh-var-columns; }
-%fh-unsorted,
+%fh-unsorted:before, %fha-unsorted:after,
 %fh-sort:before, %fha-sort:after { content: $fh-var-sort; }
 %fh-sort-down,
 %fh-sort-desc:before, %fha-sort-desc:after { content: $fh-var-sort-desc; }
@@ -223,17 +223,17 @@
 %fh-linkedin:before, %fha-linkedin:after { content: $fh-var-linkedin; }
 %fh-rotate-left,
 %fh-undo:before, %fha-undo:after { content: $fh-var-undo; }
-%fh-legal,
+%fh-legal:before, %fha-legal:after,
 %fh-gavel:before, %fha-gavel:after { content: $fh-var-gavel; }
-%fh-dashboard,
+%fh-dashboard:before, %fha-dashboard:after,
 %fh-tachometer:before, %fha-tachometer:after { content: $fh-var-tachometer; }
 %fh-comment-o:before, %fha-comment-o:after { content: $fh-var-comment-o; }
 %fh-comments-o:before, %fha-comments-o:after { content: $fh-var-comments-o; }
-%fh-flash,
+%fh-flash:before, %fha-flash:after,
 %fh-bolt:before, %fha-bolt:after { content: $fh-var-bolt; }
 %fh-sitemap:before, %fha-sitemap:after { content: $fh-var-sitemap; }
 %fh-umbrella:before, %fha-umbrella:after { content: $fh-var-umbrella; }
-%fh-paste,
+%fh-paste:before, %fha-paste:after,
 %fh-clipboard:before, %fha-clipboard:after { content: $fh-var-clipboard; }
 %fh-lightbulb-o:before, %fha-lightbulb-o:after { content: $fh-var-lightbulb-o; }
 %fh-exchange:before, %fha-exchange:after { content: $fh-var-exchange; }
@@ -294,7 +294,7 @@
 %fh-location-arrow:before, %fha-location-arrow:after { content: $fh-var-location-arrow; }
 %fh-crop:before, %fha-crop:after { content: $fh-var-crop; }
 %fh-code-fork:before, %fha-code-fork:after { content: $fh-var-code-fork; }
-%fh-unlink,
+%fh-unlink:before, %fha-unlink:after,
 %fh-chain-broken:before, %fha-chain-broken:after { content: $fh-var-chain-broken; }
 %fh-question:before, %fha-question:after { content: $fh-var-question; }
 %fh-info:before, %fha-info:after { content: $fh-var-info; }
@@ -339,23 +339,23 @@
 %fh-caret-square-o-up:before, %fha-caret-square-o-up:after { content: $fh-var-caret-square-o-up; }
 %fh-toggle-right,
 %fh-caret-square-o-right:before, %fha-caret-square-o-right:after { content: $fh-var-caret-square-o-right; }
-%fh-euro,
+%fh-euro:before, %fha-euro:after,
 %fh-eur:before, %fha-eur:after { content: $fh-var-eur; }
 %fh-gbp:before, %fha-gbp:after { content: $fh-var-gbp; }
-%fh-dollar,
+%fh-dollar:before, %fha-dollar:after,
 %fh-usd:before, %fha-usd:after { content: $fh-var-usd; }
-%fh-rupee,
+%fh-rupee:before, %fha-rupee:after,
 %fh-inr:before, %fha-inr:after { content: $fh-var-inr; }
-%fh-cny,
-%fh-rmb,
-%fh-yen,
+%fh-cny:before, %fha-cny:after,
+%fh-rmb:before, %fha-rmb:after,
+%fh-yen:before, %fha-yen:after,
 %fh-jpy:before, %fha-jpy:after { content: $fh-var-jpy; }
-%fh-ruble,
-%fh-rouble,
+%fh-ruble:before, %fha-ruble:after,
+%fh-rouble:before, %fha-rouble:after,
 %fh-rub:before, %fha-rub:after { content: $fh-var-rub; }
-%fh-won,
+%fh-won:before, %fha-won:after,
 %fh-krw:before, %fha-krw:after { content: $fh-var-krw; }
-%fh-bitcoin,
+%fh-bitcoin:before, %fha-bitcoin:after,
 %fh-btc:before, %fha-btc:after { content: $fh-var-btc; }
 %fh-file:before, %fha-file:after { content: $fh-var-file; }
 %fh-file-text:before, %fha-file-text:after { content: $fh-var-file-text; }
@@ -420,8 +420,8 @@
 %fh-envelope-square:before, %fha-envelope-square:after { content: $fh-var-envelope-square; }
 %fh-wordpress:before, %fha-wordpress:after { content: $fh-var-wordpress; }
 %fh-openid:before, %fha-openid:after { content: $fh-var-openid; }
-%fh-institution,
-%fh-bank,
+%fh-institution:before, %fha-institution:after,
+%fh-bank:before, %fha-bank:after,
 %fh-university:before, %fha-university:after { content: $fh-var-university; }
 %fh-mortar-board,
 %fh-graduation-cap:before, %fha-graduation-cap:after { content: $fh-var-graduation-cap; }
@@ -450,9 +450,9 @@
 %fh-steam:before, %fha-steam:after { content: $fh-var-steam; }
 %fh-steam-square:before, %fha-steam-square:after { content: $fh-var-steam-square; }
 %fh-recycle:before, %fha-recycle:after { content: $fh-var-recycle; }
-%fh-automobile,
+%fh-automobile:before, %fha-automobile:after,
 %fh-car:before, %fha-car:after { content: $fh-var-car; }
-%fh-cab,
+%fh-cab:before, %fha-cab:after,
 %fh-taxi:before, %fha-taxi:after { content: $fh-var-taxi; }
 %fh-tree:before, %fha-tree:after { content: $fh-var-tree; }
 %fh-spotify:before, %fha-spotify:after { content: $fh-var-spotify; }
@@ -479,21 +479,21 @@
 %fh-life-bouy,
 %fh-life-buoy,
 %fh-life-saver,
-%fh-support,
+%fh-support:before, %fha-support:after,
 %fh-life-ring:before, %fha-life-ring:after { content: $fh-var-life-ring; }
 %fh-circle-o-notch:before, %fha-circle-o-notch:after { content: $fh-var-circle-o-notch; }
-%fh-ra,
+%fh-ra:before, %fha-ra:after,
 %fh-rebel:before, %fha-rebel:after { content: $fh-var-rebel; }
-%fh-ge,
+%fh-ge:before, %fha-ge:after,
 %fh-empire:before, %fha-empire:after { content: $fh-var-empire; }
 %fh-git-square:before, %fha-git-square:after { content: $fh-var-git-square; }
 %fh-git:before, %fha-git:after { content: $fh-var-git; }
 %fh-hacker-news:before, %fha-hacker-news:after { content: $fh-var-hacker-news; }
 %fh-tencent-weibo:before, %fha-tencent-weibo:after { content: $fh-var-tencent-weibo; }
 %fh-qq:before, %fha-qq:after { content: $fh-var-qq; }
-%fh-wechat,
+%fh-wechat:before, %fha-wechat:after,
 %fh-weixin:before, %fha-weixin:after { content: $fh-var-weixin; }
-%fh-send,
+%fh-send:before, %fha-send:after,
 %fh-paper-plane:before, %fha-paper-plane:after { content: $fh-var-paper-plane; }
 %fh-send-o,
 %fh-paper-plane-o:before, %fha-paper-plane-o:after { content: $fh-var-paper-plane-o; }
@@ -544,8 +544,8 @@
 %fh-ioxhost:before, %fha-ioxhost:after { content: $fh-var-ioxhost; }
 %fh-angellist:before, %fha-angellist:after { content: $fh-var-angellist; }
 %fh-cc:before, %fha-cc:after { content: $fh-var-cc; }
-%fh-shekel,
-%fh-sheqel,
+%fh-shekel:before, %fha-shekel:after,
+%fh-sheqel:before, %fha-sheqel:after,
 %fh-ils:before, %fha-ils:after { content: $fh-var-ils; }
 %fh-meanpath:before, %fha-meanpath:after { content: $fh-var-meanpath; }
 
