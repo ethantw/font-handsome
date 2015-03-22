@@ -311,7 +311,9 @@ End point — `%fha-border`, `%fha-pull-right` or `%fha-pull-left`.
 ### Spinning icons
 Extend a selector with `%fh-spin` to get any icon to spin. Works well with icons `spinner`, `circle-o-notch`, `refresh` and `cog`.
 
-End point — `%fha-spin`.
+Use `%fh-pulse` to have it rotate with 8 steps.
+
+End point — `%fha-spin` or `%fha-pulse`.
 
 <img width="379px" src="http://ethantw.github.io/font-handsome/demo/img/spinning.png">
 
@@ -319,6 +321,10 @@ End point — `%fha-spin`.
 p.loading 
   +fh( spinner )
   @extend %fh-spin
+
+p.pulse-loading 
+  +fh( spinner )
+  @extend %fh-pulse
 
 p.waiting
   +fh( circle-o-notch )
