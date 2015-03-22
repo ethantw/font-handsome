@@ -404,7 +404,7 @@ th {
   font-style: normal;
 }
 .share:before, button.share-twitter:before, button.share-fb:before, button.config:before, #media button:before, .photo:before, nav.main li:before, article ul.cooker > li:before, article ul.cooker li:hover:before,
-article ul.cooker li.checked:before, article ul.cooker li.cutlery:before, .entry blockquote:nth-child(odd) p:first-child:before, .entry blockquote:nth-child(even) p:first-child:before, p.loading:before, p.waiting:before, button.setting:before, .military-code > li:before, a.tweet:before, button.report:before, pre.cli:before, p.no-photo:before,
+article ul.cooker li.checked:before, article ul.cooker li.cutlery:before, .entry blockquote:nth-child(odd) p:first-child:before, .entry blockquote:nth-child(even) p:first-child:before, p.loading:before, p.pulse-loading:before, p.waiting:before, button.setting:before, .military-code > li:before, a.tweet:before, button.report:before, pre.cli:before, p.no-photo:before,
 button.logout:after,
 .huge-photo:after,
 button.refresh:after,
@@ -504,6 +504,11 @@ article ul.cooker > li:before {
 .entry blockquote:nth-child(odd) p:first-child:before {
   float: right;
   margin-left: 0.3em;
+}
+
+p.pulse-loading:before {
+  -webkit-animation: fh-spin 1s infinite steps(8);
+  animation: fh-spin 1s infinite steps(8);
 }
 
 p.loading:before, p.waiting:before, button.setting:before,
@@ -687,7 +692,7 @@ article ul.cooker li.cutlery:before {
   content: "";
 }
 
-p.loading:before {
+p.loading:before, p.pulse-loading:before {
   content: "";
 }
 
