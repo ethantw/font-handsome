@@ -48,26 +48,32 @@ Basic usage
 Font Handsome currently supports Sass format. Import Font Handsome in your sheet,
 
 ```scss
-// We defaultly use CDN webfonts. You can set up a different path for devlopment.
-//- $fh-path: 'path/src/'
+@import '../(node_modules|bower_components)/font-handsome/index';
+```
 
-@import ../(node_modules|bower_components)/font-handsome/index
+Font Handsome uses Bootstrap CDN webfonts by default. You can overwrite the path by the variable `$fh-fa-path`.
+
+
+```scss
+$fh-fa-path: '/font';
+@import '../(node_modules|bower_components)/font-handsome/index';
 ```
 
 Move the presentational classes `fa-*` into your Sass style sheets with the prefix `fh-*`.
 
 #### Syntax
 ```scss
-[container]
-  +fh( $icon, $color: false ) // Use `@include` instead of `+` in .scss files
-  @extend %fh-* // Optional utility @extend(s)
+[container] {
+  @include fh( $icon, $color: false );
+  @extend %fh-*; // Optional utility(ies)
+}
 ```
-Put icon’s name from <http://fontawesome.io/icons/> without the prefix `fa-`.
+Icons of Font Handsome uses the same namespaces as those of Font Awesome. Check them out at <http://fontawesome.io/icons/>. You'll have to lose the prefix `fa-`.
 
 #### Example
 <img width="383px" src="http://ethantw.github.io/font-handsome/demo/img/basic-usage.png">
 
-An old form in Font Awesome syntax would look like,
+An old form in Font Awesome syntax to the example above would look like,
 
 ```html
 <span class="share"><i class="fa fa-share-alt"></i> Share</span>
@@ -108,9 +114,10 @@ Defaultly Font Handsome uses `::before` pseudo element for placing icons, which 
 
 #### Syntax for end-point icon
 ```scss
-[container]
-  +fha( $icon, $color ) // Use `@include` instead of `+` in .scss files
-  @extend %fha-* // Optional utility @extend(s)
+[container] {
+  @include fha( $icon, $color );
+  @extend %fha-*; // Optional utility(ies)
+}
 ```
 #### Example
 <img width="201px" src="http://ethantw.github.io/font-handsome/demo/img/before-after.png">
@@ -456,7 +463,8 @@ Summary
   * `%fh-pull-right` or `%fh-pull-left`
   * `%fha-pull-right` or `%fha-pull-left`
 - Spining  
-  `%fh-spin`/`%fha-spin`
+  * `%fh-spin`/`%fha-spin`
+  * `%fh-pulse`/`%fha-pulse`
 - Rotate (90, 180 or 270 deg.)  
   `%fh-rotate-*`/`%fha-rotate-*`
 - Flip
