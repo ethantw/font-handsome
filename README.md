@@ -48,7 +48,7 @@ Basic usage
 Font Handsome currently supports Sass format. Import Font Handsome in your sheet,
 
 ```scss
-@import '../(node_modules|bower_components)/font-handsome/index';
+@import '../node_modules/font-handsome/index';
 ```
 
 Font Handsome uses Bootstrap CDN webfonts by default. You can overwrite the path by the variable `$fh-fa-path`.
@@ -56,7 +56,7 @@ Font Handsome uses Bootstrap CDN webfonts by default. You can overwrite the path
 
 ```scss
 $fh-fa-path: '/font';
-@import '../(node_modules|bower_components)/font-handsome/index';
+@import '../node_modules/font-handsome/index';
 ```
 
 Move the presentational classes `fa-*` into your Sass style sheets with the prefix `fh-*`.
@@ -64,7 +64,9 @@ Move the presentational classes `fa-*` into your Sass style sheets with the pref
 #### Syntax
 ```scss
 [container] {
-  @include fh( $icon, $color: false );
+  @include fh( $icon, $color: false ) {
+    // icon's own styles
+  };
   @extend %fh-*; // Optional utility(ies)
 }
 ```

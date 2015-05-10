@@ -29,12 +29,14 @@
   &:before
     @if $color
       color: if( $color == true, $fh-color, $color )
+    @content
 =fha( $icon, $color: false )
   @extend %fha
   @extend %fha-#{$icon}
   &:after
     @if $color
       color: if( $color == true, $fh-color, $color )
+    @content
 
 =fh-color( $color )
   &:before
@@ -49,12 +51,14 @@
     content: $icon
     @if $font 
       font-family: $font, FontAwesome, $fh-fallback
+    @content
 =fha-pua( $icon, $font: false )
   @extend %fha
   &:after
     content: $icon
     @if $font 
       font-family: $font, FontAwesome, $fh-fallback
+    @content
 
 %fh-hide-text,
 %fha-hide-text
