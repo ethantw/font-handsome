@@ -54,11 +54,10 @@
       @if $color
         color: $color
 =fh-li( $icon, $color: false )
-  &:before
+  &
     +fh( $icon )
     @if $color
       color: $color
-
 
 // Bordered
 // --------
@@ -79,7 +78,6 @@
 %fha-pull-left,
 %fh-pull-right,
 %fha-pull-right
-  min-height: contain-floats
   overflow: auto
 
 %fh-pull-left:before,
@@ -98,6 +96,7 @@
 %fh-pulse:before,
 %fha-pulse:after
   -webkit-animation: fh-spin 1s infinite steps(8)
+  -moz-animation: fh-spin 1s infinite steps(8)
   animation: fh-spin 1s infinite steps(8)
 
 %fh-spin:before,
