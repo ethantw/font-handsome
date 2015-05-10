@@ -6,16 +6,18 @@ Font Handsome
 Semantic issue aside, the main purpose of the project is to take back full control within style sheets. We don’t need no changing the HTML structure every time we want a different icon or modifying the DOM tree for other interactional effects, anymore.
 
 [Check out the demo →](http://ethantw.github.io/font-handsome/)  
-*Current version:* **0.2.0**, with all icons from Font Awesome **4.3.0**.
+*Current version:* **0.3.0**, with all icons from Font Awesome **4.3.0**.
+
+Since v0.3.0, Font Handsome starts to provide the Stylus library. Pretty much the same syntax as the one of Sass’s. Check out the code itself for more usage information.
 
 
 Install
 -------
-- NPM `npm i --save font-handsome`
-- Bower `bower install git://github.com/ethantw/font-handsome.git`
+- NPM `npm i --S font-handsome`
 
-### Run test (Compiling Sass)
-- `npm test`
+### Run test
+- `npm test` (compiling in Sass)
+- `npm run test-stylus` (compiling in Stylus)
 
 Browser support
 ---------------
@@ -117,7 +119,9 @@ Defaultly Font Handsome uses `::before` pseudo element for placing icons, which 
 #### Syntax for end-point icon
 ```scss
 [container] {
-  @include fha( $icon, $color );
+  @include fha( $icon, $color ) {
+    // icon's own styles
+  };
   @extend %fha-*; // Optional utility(ies)
 }
 ```

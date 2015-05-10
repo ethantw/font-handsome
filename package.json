@@ -1,6 +1,6 @@
 {
   "name": "font-handsome",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Take back full control of icons within stylesheets.",
   "main": "_index.sass",
   "repository": {
@@ -9,19 +9,22 @@
   },
   "keywords": [
     "OOSass",
+    "OOStylus",
     "font",
     "icon"
   ],
   "author": "Chen Yijun (@ethantw)",
   "license": "MIT License",
   "scripts": {
-    "test": "./node_modules/node-sass/bin/node-sass demo/demo.sass"
+    "test":        "./node_modules/node-sass/bin/node-sass demo/demo.sass",
+    "test-stylus": "./node_modules/stylus/bin/stylus demo/demo.styl"
   },
   "bugs": {
     "url": "https://github.com/ethantw/font-handsome/issues"
   },
   "homepage": "https://github.com/ethantw/font-handsome",
   "devDependencies": {
-    "node-sass": "^1.2.3"
+    "node-sass": "^1.2.3",
+    "stylus": "^0.51.1"
   }
 }
