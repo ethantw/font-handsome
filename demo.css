@@ -1,416 +1,42 @@
-@charset "UTF-8";
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-input {
-  line-height: normal;
-}
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
 @font-face {
   font-family: FontAwesome;
-  src: url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  src: url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format('woff2'), url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format('woff'), url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format('truetype'), url("//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
-.share:before, button.share-twitter:before, button.share-fb:before, button.config:before, #media button:before, .photo:before, nav.main li:before, article ul.cooker > li:before, article ul.cooker li:hover:before,
-article ul.cooker li.checked:before, article ul.cooker li.cutlery:before, .entry blockquote:nth-child(odd) p:first-child:before, .entry blockquote:nth-child(even) p:first-child:before, p.loading:before, p.pulse-loading:before, p.waiting:before, button.setting:before, .military-code > li:before, a.tweet:before, button.report:before, pre.cli:before, p.no-photo:before,
+.share:before,
+button.share-twitter:before,
+button.share-fb:before,
+button.config:before,
 button.logout:after,
+#media button.backward:before,
+#media button.play-pause:before,
+#media button.forward:before,
+.photo:before,
 .huge-photo:after,
+nav.main li.home:before,
+nav.main li.lib:before,
+nav.main li.app:before,
+nav.main li.config:before,
+article ul.cooker > li:before,
+article ul.cooker li:hover:before,
+article ul.cooker li.checked:before,
+article ul.cooker li.cutlery:before,
+.entry blockquote:nth-child(odd) p:first-child:before,
+.entry blockquote:nth-child(even) p:first-child:before,
+p.loading:before,
+p.pulse-loading:before,
+p.waiting:before,
+button.setting:before,
 button.refresh:after,
+.military-code > li:before,
+a.tweet:before,
 a.tweet:after,
+button.report:before,
 button.report:after,
+pre.cli:before,
 pre.cli:after,
+p.no-photo:before,
 p.no-photo:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -428,7 +54,6 @@ p.no-photo:after {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
 }
-
 #media button {
   color: transparent;
   display: inline-block;
@@ -437,37 +62,24 @@ p.no-photo:after {
   overflow: hidden;
   padding: 0.05em;
 }
-
-#media button:before {
-  color: #333;
-}
-
 .photo:before {
-  font-size: 1.33333em;
+  font-size: 1.333333333333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
-
-a.tweet:after,
-button.report:after,
-pre.cli:after,
-p.no-photo:after {
-  font-size: 2em;
-}
-
-.entry blockquote:nth-child(odd) p:first-child:before, .entry blockquote:nth-child(even) p:first-child:before,
+.entry blockquote:nth-child(odd) p:first-child:before,
+.entry blockquote:nth-child(even) p:first-child:before,
 .huge-photo:after {
   font-size: 3em;
 }
-
-nav.main li:before, .military-code > li:before {
-  width: 1.28571em;
+nav.main li:before,
+.military-code > li:before {
+  width: 1.285714285714286em;
   text-align: center;
 }
-
 article ul.cooker {
   padding-left: 0;
-  margin-left: 2.14286em;
+  margin-left: 2.142857142857143em;
   list-style-type: none;
 }
 article ul.cooker > li {
@@ -475,13 +87,13 @@ article ul.cooker > li {
 }
 article ul.cooker > li:before {
   position: absolute;
-  left: -2.14286em;
-  width: 2.14286em;
-  top: 0.14286em;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  top: 0.142857142857143em;
   text-align: center;
 }
-
-.entry blockquote:nth-child(odd) p:first-child:before, .entry blockquote:nth-child(even) p:first-child:before {
+.entry blockquote:nth-child(odd) p:first-child:before,
+.entry blockquote:nth-child(even) p:first-child:before {
   padding: 0.2em 0.25em 0.15em;
   border: solid 0.08em #eee;
   border-radius: 0.1em;
@@ -489,98 +101,75 @@ article ul.cooker > li:before {
   border: solid 0.08em #eee;
   border-radius: 0.1em;
 }
-
-.entry blockquote:nth-child(even) p:first-child,
-.entry blockquote:nth-child(odd) p:first-child {
-  min-height: contain-floats;
+.entry blockquote:nth-child(odd) p:first-child,
+.entry blockquote:nth-child(even) p:first-child {
   overflow: auto;
 }
-
 .entry blockquote:nth-child(even) p:first-child:before {
   float: left;
   margin-right: 0.3em;
 }
-
 .entry blockquote:nth-child(odd) p:first-child:before {
   float: right;
   margin-left: 0.3em;
 }
-
 p.pulse-loading:before {
   -webkit-animation: fh-spin 1s infinite steps(8);
+  -moz-animation: fh-spin 1s infinite steps(8);
   animation: fh-spin 1s infinite steps(8);
 }
-
-p.loading:before, p.waiting:before, button.setting:before,
+p.loading:before,
+p.waiting:before,
+button.setting:before,
 button.refresh:hover:after,
 button.refresh.ing:after {
   -webkit-animation: fh-spin 2s infinite linear;
   -moz-animation: fh-spin 2s infinite linear;
   animation: fh-spin 2s infinite linear;
 }
-
-@-webkit-keyframes fh-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-@-ms-keyframes fh-spin {
-  0% {
-    -ms-transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(359deg);
-  }
-}
-@keyframes fh-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
 .military-code .attacking:before {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
 .military-code .wiped-out:before {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
 .military-code .attacked:before {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-
 .military-code .ally:before {
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
-
 .military-code .enemy:before {
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
-
-a.tweet, button.report, pre.cli, p.no-photo {
+a.tweet,
+button.report,
+pre.cli,
+p.no-photo {
   min-height: 2em;
   min-width: 2em;
   padding-left: 2.1em;
   padding-top: 0.45em;
   position: relative;
 }
-a.tweet:before, button.report:before, pre.cli:before, p.no-photo:before, a.tweet:after, button.report:after, pre.cli:after, p.no-photo:after {
+a.tweet:before,
+button.report:before,
+pre.cli:before,
+p.no-photo:before,
+a.tweet:after,
+button.report:after,
+pre.cli:after,
+p.no-photo:after {
   position: absolute;
   left: 0;
   top: 0;
@@ -590,137 +179,166 @@ a.tweet:before, button.report:before, pre.cli:before, p.no-photo:before, a.tweet
   vertical-align: middle;
   color: #333;
 }
-a.tweet:before, button.report:before, pre.cli:before, p.no-photo:before {
+a.tweet:before,
+button.report:before,
+pre.cli:before,
+p.no-photo:before {
   height: 2em;
   width: 2em;
   z-index: 5;
 }
-a.tweet:after, button.report:after, pre.cli:after, p.no-photo:after {
+a.tweet:after,
+button.report:after,
+pre.cli:after,
+p.no-photo:after {
   height: 1em;
   width: 1em;
+  font-size: 2em;
   line-height: 1;
 }
-
 p.no-photo:after {
   z-index: 10;
 }
-
 pre.cli:before,
 button.report:after {
   color: #fff;
 }
-
+@-moz-keyframes fh-spin {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes fh-spin {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes fh-spin {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fh-spin {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 button.config:before,
 nav.main li.config:before,
 button.setting:before {
-  content: "";
+  content: '\f013';
 }
-
 nav.main li.home:before {
-  content: "";
+  content: '\f015';
 }
-
 button.refresh:after {
-  content: "";
+  content: '\f021';
 }
-
 button.report:before {
-  content: "";
+  content: '\f024';
 }
-
 nav.main li.lib:before {
-  content: "";
+  content: '\f02d';
 }
-
 p.no-photo:before {
-  content: "";
+  content: '\f030';
 }
-
 nav.main li.app:before {
-  content: "";
+  content: '\f040';
 }
-
 #media button.backward:before {
-  content: "";
+  content: '\f04a';
 }
-
 #media button.play-pause:before {
-  content: "";
+  content: '\f04b';
 }
-
 #media button.forward:before {
-  content: "";
+  content: '\f04e';
 }
-
 p.no-photo:after {
-  content: "";
+  content: '\f05e';
 }
-
 button.share-fb:before {
-  content: "";
+  content: '\f082';
 }
-
-.photo:before, .huge-photo:after {
-  content: "";
+.photo:before,
+.huge-photo:after {
+  content: '\f083';
 }
-
 button.logout:after {
-  content: "";
+  content: '\f08b';
 }
-
 a.tweet:after {
-  content: "";
+  content: '\f096';
 }
-
-button.share-twitter:before, a.tweet:before {
-  content: "";
+button.share-twitter:before,
+a.tweet:before {
+  content: '\f099';
 }
-
-article ul.cooker > li:before, pre.cli:after {
-  content: "";
+article ul.cooker > li:before,
+pre.cli:after {
+  content: '\f0c8';
 }
-
 article ul.cooker li.cutlery:before {
-  content: "";
+  content: '\f0f5';
 }
-
 .entry blockquote:nth-child(even) p:first-child:before {
-  content: "";
+  content: '\f10d';
 }
-
 .entry blockquote:nth-child(odd) p:first-child:before {
-  content: "";
+  content: '\f10e';
 }
-
-p.loading:before, p.pulse-loading:before {
-  content: "";
+p.loading:before,
+p.pulse-loading:before {
+  content: '\f110';
 }
-
 button.report:after {
-  content: "";
+  content: '\f111';
 }
-
 pre.cli:before {
-  content: "";
+  content: '\f120';
 }
-
 .military-code > li:before {
-  content: "";
+  content: '\f132';
 }
-
 article ul.cooker li:hover:before,
 article ul.cooker li.checked:before {
-  content: "";
+  content: '\f14a';
 }
-
 p.waiting:before {
-  content: "";
+  content: '\f1ce';
 }
-
 .share:before {
-  content: "";
+  content: '\f1e0';
 }
-
 *,
 *:before,
 *:after {
@@ -728,32 +346,26 @@ p.waiting:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
 }
-
 .layout {
   max-width: 60em;
   width: 90%;
   margin: 0 auto;
 }
-
 a:link,
 a:visited {
-  color: #285f8f;
+  color: #2e6ea5;
   text-decoration: none;
 }
-
 a:hover {
   color: #337ab7;
   text-decoration: underline;
 }
-
 a:active {
-  color: #449d44;
+  color: #4bad4b;
 }
-
 button {
   background: none;
   border: 1px solid #ccc;
@@ -761,47 +373,44 @@ button {
   outline: 0;
   padding: 0.25em;
 }
-
 article.layout {
   padding: 2em 0;
 }
-
 article h1 + p,
+article h2 + p,
+article h3 + p,
+article h4 + p,
+article h5 + p,
+article h6 + p,
 article h1 + ul,
-article h1 + ol, article h2 + p,
 article h2 + ul,
-article h2 + ol, article h3 + p,
 article h3 + ul,
-article h3 + ol, article h4 + p,
 article h4 + ul,
-article h4 + ol, article h5 + p,
 article h5 + ul,
-article h5 + ol, article h6 + p,
 article h6 + ul,
+article h1 + ol,
+article h2 + ol,
+article h3 + ol,
+article h4 + ol,
+article h5 + ol,
 article h6 + ol {
   margin-top: -1em;
 }
-
 .share {
   margin-right: 0.25em;
 }
-
 button.share-twitter:before {
   color: #50aaf1;
 }
-
 button.share-fb:before {
   color: #405b9d;
 }
-
 button.config:before {
   color: #333;
 }
-
 button.logout:after {
   color: #d9534f;
 }
-
 #media button {
   height: 2em;
   width: 2em;
@@ -810,25 +419,26 @@ button.logout:after {
   border-color: #ccc;
   border-radius: 1em;
 }
+#media button:before {
+  color: #333;
+}
 #media button.backward {
   padding-left: 0.3em;
 }
 #media button.play-pause {
   background-color: #bbb;
 }
-
-span.photo, .huge-photo {
-  background-color: #9bd8eb;
+span.photo,
+.huge-photo {
+  background-color: #74c9e3;
   border-radius: 0.25em;
   margin-right: 0.5em;
   padding: 0.25em;
 }
-
 nav.main ul {
   padding-left: 1em;
   list-style: none;
 }
-
 article ul.cooker > li:before {
   color: #999;
 }
@@ -836,28 +446,25 @@ article ul.cooker li:hover,
 article ul.cooker li.checked {
   cursor: pointer;
 }
-article ul.cooker li:hover:before,
-article ul.cooker li.checked:before {
+article ul.cooker li:hover,
+article ul.cooker li.checked {
   color: #337ab7;
 }
 article ul.cooker li.checked:before {
   color: #5cb85c;
 }
-article ul.cooker li.cutlery:before {
+article ul.cooker li.cutlery {
   color: #f0ad4e;
 }
-
 .entry blockquote:nth-child(odd) p:first-child {
   text-align: right;
 }
 .entry blockquote:nth-child(even) p:first-child {
   text-align: left;
 }
-
 p.waiting:before {
   color: #333;
 }
-
 .military-code {
   list-style: none;
   padding-left: 0.5em;
@@ -877,17 +484,15 @@ p.waiting:before {
 .military-code .enemy:before {
   color: #5cb85c;
 }
-
 a.tweet:before {
   color: #50aaf1;
 }
 a.tweet:after {
   color: #50aaf1;
 }
-
 button.report {
   background-color: #d9534f;
-  border-color: #d33632;
+  border-color: #d5423e;
   color: #efefef;
   font-weight: bold;
   padding-bottom: 0.55em;
@@ -895,13 +500,11 @@ button.report {
 button.report:before {
   color: #d9534f;
 }
-
 pre.cli {
   background-color: #ace;
   border-radius: 0.25em;
   padding: 0.5em 0.5em 0.55em 2.3em;
 }
-
 p.no-photo:before {
   color: #333;
 }
