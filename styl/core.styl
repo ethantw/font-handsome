@@ -1,0 +1,71 @@
+
+@font-face
+  font-family: FontAwesome
+  src: url($fh-fa-path + '/fontawesome-webfont.woff2?v=' + $fh-fa-version) format('woff2'), url($fh-fa-path + '/fontawesome-webfont.woff?v=' + $fh-fa-version) format('woff'), url($fh-fa-path + '/fontawesome-webfont.ttf?v=' + $fh-fa-version) format('truetype'), url($fh-fa-path + 'fontawesome-webfont.svg?v=' + $fh-fa-version +'#fontawesomeregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+$fh
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  display: inline-block
+  font-family: FontAwesome, $fh-fallback
+  font-size: inherit
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  padding: .05em
+  text-indent: 0
+  text-rendering: auto 
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  transform: translate(0, 0) // ensures no half-pixel rendering in firefox
+
+fh( $icon, $color = false )
+  &:before
+    @extend $fh, $fh-{$icon}
+    color: $color == true ? $fh-color : $color if $color
+    {block}
+fha( $icon, $color = false )
+  &:after
+    @extend $fh, $fh-{$icon}
+    color: $color == true ? $fh-color : $color if $color
+    {block}
+
+fh-color( $color )
+  &:before
+    color: $color
+fha-color( $color )
+  &:after
+    color: $color
+
+fh-pua( $icon, $font = false )
+  @extend $fh
+  &:before
+    content: $icon
+    font-family: $font, FontAwesome, $fh-fallback if $font 
+    {block}
+fha-pua( $icon, $font = false )
+  @extend $fha
+  &:after
+    content: $icon
+    font-family: $font, FontAwesome, $fh-fallback if $font 
+    {block}
+
+$fh-hide-text-core
+  color: transparent
+  display: inline-block
+  height: 1.1em
+  width: 1.1em
+  overflow: hidden
+  padding: .05em
+fh-hide-text()
+  @extend $fh-hide-text-core
+  &:before
+    color: $fh-color
+fha-hide-text()
+  @extend $fh-hide-text-core
+  &:after
+    color: $fh-color
+

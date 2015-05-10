@@ -1,0 +1,239 @@
+
+// Sizes
+// -----
+
+// makes the font 33% larger relative to the icon container 
+$fh-lg
+  &:before
+    font-size: (4em / 3)
+    line-height: (3em / 4)
+    vertical-align: -15%
+$fha-lg
+  &:after
+    @extend $fh-lg:before
+
+$fh-2x
+  &:before
+    font-size: 2em
+$fha-2x
+  &:after
+   @extend $fh-2x:before
+
+$fh-3x
+  &:before
+    font-size: 3em
+$fha-3x
+  &:after
+   @extend $fh-3x:before
+
+$fh-4x
+  &:before
+    font-size: 4em
+$fha-4x
+  &:after
+   @extend $fh-4x:before
+
+$fh-5x
+  &:before
+    font-size: 5em
+$fha-5x
+  &:after
+   @extend $fh-5x:before
+
+// Fixed width
+$fh-fw
+  &:before
+    width: (18em / 14)
+    text-align: center
+$fha-fw
+  &:after
+    @extend $fh-fw:before
+
+// Unordered lists
+// ---------------
+$fh-ul 
+  padding-left: 0
+  margin-left: $fh-li-width
+  list-style-type: none
+  > li
+    position: relative 
+  > li:before
+    position: absolute
+    left: -($fh-li-width)
+    width: $fh-li-width
+    top: (2em / 14)
+    text-align: center
+
+fh-ul( $icon, $color = false )
+  @extend $fh-ul
+  > li
+    fh( $icon )
+    &:before
+      color: $color if $color
+fh-li( $icon, $color = false )
+  &
+    fh( $icon )
+    color: $color if $color
+
+// Bordered
+// --------
+
+$fh-border
+  &:before
+    padding: .2em .25em .15em
+    border: solid .08em $fh-border-color
+    border-radius: .1em
+    padding: .2em .25em .15em
+    border: solid .08em $fh-border-color
+    border-radius: .1em
+$fha-border
+  &:after
+    @extend $fh-border:before
+
+// Pulled
+// ------
+
+$fh-pull-left,
+$fha-pull-left,
+$fh-pull-right,
+$fha-pull-right
+  overflow: auto
+
+$fh-pull-left
+  &:before
+    float: left
+    margin-right: .3em
+$fha-pull-left
+  &:after
+    @extend $fh-pull-left:before
+
+$fh-pull-right
+  &:before
+    float: right
+    margin-left: .3em
+$fha-pull-right
+  &:after
+    @extend $fh-pull-right:before
+
+// Spinning
+// --------
+
+$fh-pulse
+  &:before
+    -webkit-animation: fh-spin 1s infinite steps(8)
+    -moz-animation: fh-spin 1s infinite steps(8)
+    animation: fh-spin 1s infinite steps(8)
+$fha-pulse
+  &:after
+    @extend $fh-pulse:before
+
+$fh-spin
+  &:before
+    -webkit-animation: fh-spin 2s infinite linear
+    -moz-animation: fh-spin 2s infinite linear
+    animation: fh-spin 2s infinite linear
+$fha-spin
+  &:after
+    @extend $fh-spin:before
+    
+@keyframes fh-spin 
+  0%
+    -ms-transform: rotate(0deg) 
+    -webkit-transform: rotate(0deg) 
+    transform: rotate(0deg) 
+  100%
+    -ms-transform: rotate(359deg) 
+    -webkit-transform: rotate(359deg) 
+    transform: rotate(359deg) 
+
+// Rotated & flipped
+// -----------------
+
+$fh-rotate-90
+  &:before
+    fh-icon-rotate( 90deg, 1 )
+$fha-rotate-90
+  &:after
+    @extend $fh-rotate-90:before
+
+$fh-rotate-180
+  &:before
+    fh-icon-rotate( 180deg, 2 )
+$fha-rotate-180
+  &:after
+    @extend $fh-rotate-180:before
+
+$fh-rotate-270
+  &:before
+    fh-icon-rotate( 270deg, 3 ) 
+$fha-rotate-270
+  &:after
+    @extend $fh-rotate-270:before
+
+$fh-flip-horizontal
+  &:before
+    fh-icon-flip( -1, 1, 0 )
+$fha-flip-horizontal
+  &:after
+    @extend $fh-flip-horizontal:before
+
+$fh-flip-vertical
+  &:before
+    fh-icon-flip( 1, -1, 2 )
+$fha-flip-vertical
+  &:after
+    @extend $fh-flip-vertical:before
+
+// Stacked
+// -------
+
+// Use `:before` pseudo-element for 1x stack,
+// and `:after` for 2x.
+
+$fh-stack 
+  min-height: 2em
+  min-width: 2em
+  padding-left: 2.1em
+  padding-top: .45em
+  position: relative
+  &:before,
+  &:after 
+    position: absolute
+    left: 0
+    top: 0
+    display: inline-block
+    line-height: 2
+    text-align: center
+    vertical-align: middle
+    color: $fh-color
+  &:before
+    height: 2em
+    width: 2em
+    z-index: 5
+  &:after
+    height: 1em
+    width: 1em
+    font-size: 2em
+    line-height: 1
+$fh-2x-on-top
+  &:after
+    z-index: 10
+
+fh-stack( $i1x, $i2x, $i1x-color = false, $i2x-color = false, $i2x-on-top = false )
+  @extend $fh-stack
+  fh(  $i1x, $i1x-color ) 
+  fha( $i2x, $i2x-color )
+  if $i2x-on-top
+    @extend $fh-2x-on-top 
+
+// Colour inverse
+// --------------
+$fh-inverse,
+$fh-1x-inverse
+  &:before
+    color: $fh-inverse 
+$fha-inverse,
+$fh-2x-inverse
+  &:after
+    @extend $fh-inverse:before
+
