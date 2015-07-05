@@ -8,7 +8,7 @@ Semantic issue aside, the main purpose of the project is to take back full contr
 [Check out the demo →](http://ethantw.github.io/font-handsome/)  
 *Current version:* **0.3.0**, with all icons from Font Awesome **4.3.0**.
 
-Since v0.3.0, Font Handsome starts to provide the Stylus library. Pretty much the same syntax as the one of Sass’s. Check out the code itself for more usage information.
+Font Handsome currently supports two CSS preprocessors, Sass and Stylus. The API documentation below indicates the usage of the Sass syntax.
 
 
 Install
